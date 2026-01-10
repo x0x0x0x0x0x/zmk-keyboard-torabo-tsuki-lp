@@ -2,25 +2,14 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-/ {
-    behaviors {
-        tb_scroll: tb_scroll {
-            compatible = "zmk,input-behavior";
-            #binding-cells = <0>;
-
-            device = <&trackball>;
-            layers = <3>;
-
-            inputs  = <INPUT_REL_X INPUT_REL_Y>;
-            outputs = <INPUT_REL_HWHEEL INPUT_REL_WHEEL>;
-
-            scale = <40>;
-        };
-    };
-};
-
 &trackball_listener {
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_x_scaler 3 5>, <&zip_y_scaler 3 5>;
+
+    scroller {
+        layer = <3>;
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>, <&zip_scroll_scaler 1 128>;
+        process-next;
+    };
 };
 
 &size_s_transform {
