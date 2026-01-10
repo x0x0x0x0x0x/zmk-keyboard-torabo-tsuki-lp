@@ -21,8 +21,8 @@
         layer_0 {
             bindings = <
 &trans     &trans        &trans    &trans    &trans      &trans                            &trans       &trans  &trans     &trans    &trans                &trans
-&kp ESC    &kp Q         &kp W     &kp F     &kp P       &kp B                             &kp J        &kp L   &kp U      &kp Y     &kp SEMI              &kp BSPC
-&kp TAB    &kp A         &kp R     &kp S     &kp T       &kp G        &trans     &trans    &kp M        &kp N   &kp E      &kp I     &kp O                 &kp SQT
+&kp ESC    &kp Q         &kp W     &kp F     &kp P       &kp B                             &kp J        &kp L   &kp U      &kp Y     &kp SEMI              &kp SQT
+&kp TAB    &kp A         &kp R     &kp S     &kp T       &kp G        &trans     &trans    &kp M        &kp N   &kp E      &kp I     &kp O                 &kp MINUS
 &kp LSHFT  &kp Z         &kp X     &kp C     &kp D       &kp V        &kp SPACE  &kp RET   &kp K        &kp H   &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &kp UP
 &kp LCTRL  &kp LEFT_GUI  &kp LALT  &kp LALT  &kp LSHIFT  &lt 1 SPACE  &to 3      &kp BSPC  &lt 2 ENTER  &trans  &trans     &kp LEFT  &kp RIGHT             &kp DOWN
             >;
